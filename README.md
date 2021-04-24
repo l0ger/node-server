@@ -2,7 +2,7 @@
 
 Simple Node Web Server for educational purposes.
 
-##Usage
+## Usage
 
 1-Go to the project root directory and enter the run command:
 
