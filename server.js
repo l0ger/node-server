@@ -8,11 +8,12 @@ const port = 8000;
 function mainHandler(req,res){
     const requestUrl = url.parse(req.url).path;
     const fsPath = path.normalize(requestUrl);
-    if(!fs.existsSync(path)){
+    const filePath = path.join(process.cwd(),fsPath);
+    if(!fs.existsSync(filePath)){
         res.writeHead(401);
         res.end("Page Not Found");
     }
-    const indexPage = fs.readFileSync(path.join(process.cwd(),fsPath), 'utf8');
+    const indexPage = fs.readFileSync(filePath, 'utf8');
 
     console.log(requestUrl);
     console.log(fsPath);

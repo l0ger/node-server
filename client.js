@@ -12,6 +12,9 @@
 
 // console.log(counterModule());
 
- function findMax(){
-    console.log("test");
-}
+(function() {
+    var a = b = 5;
+  })();
+  
+  console.log(b);
+
